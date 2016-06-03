@@ -2164,6 +2164,40 @@
 			margin: 0 0 9em 0;
 			font-size: 0.8em;
 		}
+		
+		#footer .copyright .menu{
+			position: relative;
+		}
+		
+		#footer .copyright .menu .back_me {
+			position: absolute;
+			background-color: #000;
+			opacity: 0.6;
+			width: 100%;
+			height: 156px;
+		}
+		
+		#footer .copyright .menu a{
+			position: relative;
+		}
+		
+		@media (max-width: 840px) {
+			#footer .copyright .menu .back_me {
+				height: 140px;
+			}
+		}
+		
+		@media (max-width: 736px) {
+			#footer .copyright .menu .back_me {
+				height: 115px;
+			}
+		}
+		
+		@media (max-width: 455px) {
+			#footer .copyright .menu .back_me {
+				height: 190px;
+			}
+		}
 
 /* Poptrox */
 
