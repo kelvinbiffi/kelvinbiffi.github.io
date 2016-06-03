@@ -2141,6 +2141,12 @@
     	filter: grayscale(100%);
 		}
 		
+		@media (max-width: 736px) {
+			#footer a img{
+				width: 30px;
+			}
+		}
+		
 		#footer a img:hover{
 			-webkit-filter: none;
     	filter: none;
