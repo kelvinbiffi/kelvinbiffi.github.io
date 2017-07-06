@@ -75,7 +75,7 @@
 
 @lg-max: 1200px;
 @md-max: 992px;
-@sm-max: 768px;
+@sm-max: 790px;
 @xs-max: 480px;
 
 html, body{
@@ -105,6 +105,20 @@ html, body{
   }
   .page{
     padding-top: 380px;
+  }
+  @media(max-width: @sm-max){
+    .header{
+      height: 97px;
+      .photo{
+        img{
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+    .page{
+      padding-top: 350px;
+    }
   }
 }
 
