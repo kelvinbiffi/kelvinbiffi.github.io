@@ -70,7 +70,7 @@
 @colorCello: #1D365D; //LESS
 @colorTotemPole: #A6120D; //AngularJS
 @colorFlushMahogany: #CF4647; // GULP
-@colorCinnabar: #E34C26; //HTML
+@colorCinnabar: #E34C26; //HTML - MySQL
 @colorKashmirBlue: #4F5D95; //PHP
 
 @lg-max: 1200px;
@@ -290,6 +290,9 @@ html, body{
             &.html{
               border-color: @colorCinnabar;
             }
+						&.mysql{
+							border-color: lighten(@colorCinnabar, 10%);
+						}
             &.php{
               border-color: @colorKashmirBlue;
             }
