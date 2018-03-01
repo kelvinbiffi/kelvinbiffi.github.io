@@ -20,38 +20,64 @@
 		</script>
   </head>
   <body>
+    <div class="language">
+      <span class="language_en_btn">EN</span> | <span class="language_pt_btn">PT</span>
+    </div>
     <div class="header">
       <div class="photo">
         <img src="/images/me.jpg" alt="ME">
         <h1>Kelvin Baumhardt Biffi Leote</h1>
-        <h2>Android/Web Developer</h2>
+        <h2 class="en">Writer / Developer</h2>
+        <h2 class="pt">Escritor / Desenvolvedor</h2>
       </div>
     </div>
     <div class="page">
-      <!-- About block to say something about me -->
+      <!-- About section to say something about me -->
       <div id="about" class="block about">
-        <p>
+        <p class="en">
           <span class="show">A fast view about me</span>
           <br>
           <span class="me">I'm from from South Brazil, I'm Married, I have a dog and I like drink craft beers and to play card games!</span>
           <br>
-          <span class="what">I'm a developer by heart who love learn and crazy about put the knowledge in practice!</span>
+          <span class="what">I'm a writer and developer by heart who love learn and crazy about put the knowledge in practice!</span>
           <br>
           <span class="you">Thats it!</span>
+        </p>
+        <p class="pt">
+          <span class="show">Uma visão rápida sobre mim</span>
           <br>
-          <span class="do">Now is the boring part where I say to you what I know, how good I'm then I say which are the hundred of companies I have worked and, BLA, BLA, BLA, ....!</span>
+          <span class="me">Eu sou do Sul do Brasil, eu sou casado, eu tenho um cachorro e gosto de beber cervejas artesanais e jogar jogos de cartas!</span>
           <br>
-          <span class="not">But no!</span>
+          <span class="what">Eu sou um escritor e desenvolvedor de coração que ama aprender e louco por colocar o conhecimento na prática!</span>
           <br>
-          <span class="say">I prefer show to you what I have been developing and let you decid how many I know and how good I'm!</span>
-          <br>
-          <span>I expect that you have a good tour among my projects :D</span>
+          <span class="you">É isso aí!</span>
         </p>
       </div>
 
-      <!-- Projects block to show to you My MAGICs! -->
+      <!-- Projects section to show to you My MAGICs! -->
+      <div id="books" class="block books pt">
+        <h3>Livros Publicados</h3>
+
+        <!-- MovieLover -->
+        <div class="book">
+          <h4>O Menino Dentro da Cartola de Retalhos</h4>
+          <p>
+            <img src="images/books/o_menino_dentro_da_cartola.jpg" alt="O Menino Dentro da Cartola de Retalhos" />
+          </p>
+          <div class="links">
+            <img src="images/download.png" alt="DOWNLOAD" />
+            <br>
+            <a class="saraiva" href="https://www.saraiva.com.br/o-menino-dentro-da-cartola-de-retalhos-10114362.html" target="_blank">SARAIVA</a>
+            <br><br>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Projects section to show to you My MAGICs! -->
       <div id="projects" class="block projects">
-        <h3>Here We GO!</h3>
+        <h3 class="en">Projects</h3>
+        <h3 class="pt">Projetos</h3>
 
         <!-- MovieLover -->
         <div class="project">
@@ -59,7 +85,10 @@
           <div class="links">
             <a href="https://github.com/kelvinbiffi/MovieLover" target="_blank">GITHUB</a>
             <br>
-            <a href="https://movie-lover.herokuapp.com/" target="_blank">SEE</a>
+            <a href="https://movie-lover.herokuapp.com/" target="_blank">
+              <span class="en">SEE</span>
+              <span class="pt">VER</span>
+            </a>
           </div>
           <p>
             <span class="nodejs">NodeJS</span>
@@ -76,7 +105,10 @@
           <div class="links">
             <a href="https://github.com/kelvinbiffi/TapToWin" target="_blank">GITHUB</a>
             <br>
-            <a href="https://play.google.com/store/apps/details?id=kelvinbiffi.com.taptowin" target="_blank">SEE</a>
+            <a href="https://play.google.com/store/apps/details?id=kelvinbiffi.com.taptowin" target="_blank">
+              <span class="en">SEE</span>
+              <span class="pt">VER</span>
+            </a>
           </div>
           <p>
             <span class="android">ANDROID</span>
@@ -89,7 +121,10 @@
           <div class="links">
             <a href="https://github.com/kelvinbiffi/Pig-Game" target="_blank">GITHUB</a>
             <br>
-            <a href="http://kelvins.cc/pig_game/" target="_blank">SEE</a>
+            <a href="http://kelvins.cc/pig_game/" target="_blank">
+              <span class="en">SEE</span>
+              <span class="pt">VER</span>
+            </a>
           </div>
           <p>
             <span class="js">JAVASCRIPT</span>
@@ -117,7 +152,10 @@
           <div class="links">
             <a href="https://github.com/kelvinbiffi/ForecastWeather" target="_blank">GITHUB</a>
             <br>
-            <a href="http://kelvins.cc/forecast-weather/" target="_blank">SEE</a>
+            <a href="http://kelvins.cc/forecast-weather/" target="_blank">
+              <span class="en">SEE</span>
+              <span class="pt">VER</span>
+            </a>
           </div>
           <p>
             <span class="html">HTML</span>
@@ -132,7 +170,10 @@
           <div class="links">
             <a href="https://github.com/kelvinbiffi/NaCamufla" target="_blank">GITHUB</a>
             <br>
-            <a href="http://kelvins.cc/chat" target="_blank">SEE</a>
+            <a href="http://kelvins.cc/chat" target="_blank">
+              <span class="en">SEE</span>
+              <span class="pt">VER</span>
+            </a>
           </div>
           <p>
             <span class="angularjs">AngularJS</span>
@@ -148,7 +189,10 @@
           <div class="links">
             <a href="https://github.com/kelvinbiffi/Taskboard" target="_blank">GITHUB</a>
             <br>
-            <a href="http://kelvins.cc/taskboard/" target="_blank">SEE</a>
+            <a href="http://kelvins.cc/taskboard/" target="_blank">
+              <span class="en">SEE</span>
+              <span class="pt">VER</span>
+            </a>
           </div>
           <p>
             <span class="angularjs">AngularJS</span>
@@ -178,7 +222,10 @@
           <div class="links">
             <a href="https://github.com/kelvinbiffi/OpenChatiry" target="_blank">GITHUB</a>
             <!--br>
-            <a href="http://kelvins.cc/open-charity/" target="_blank">SEE</a-->
+            <a href="http://kelvins.cc/open-charity/" target="_blank">
+              <span class="en">SEE</span>
+              <span class="pt">VER</span>
+            </a-->
           </div>
           <p>
             <span class="php">PHP</span>
@@ -189,13 +236,14 @@
 
       </div>
 
-      <!-- Contact block to be possible you contact me if you have liked my work! -->
+      <!-- Contact section to be possible you contact me if you have liked my work! -->
       <div id="contact" class="block contact">
-        <h3>Here are MY Contacts!</h3>
+        <h3 class="en">Here are MY Contacts!</h3>
+        <h3 class="pt">Aqui estão MEUS Contatos!</h3>
         <p>
           <a href="tel:+5551993005029">+55 51 99300-5029</a>
           <br>
-          <a href="mailto:kelvnbiffi@gmail.com">kelvnbiffi@gmail.com</a>
+          <a href="mailto:kelvnbiffi.developer@gmail.com">kelvnbiffi.developer@gmail.com</a>
         </p>
       </div>
     </div>

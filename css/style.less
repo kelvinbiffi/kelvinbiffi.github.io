@@ -6,7 +6,7 @@
 @siteFirstFontFamily: 'Open Sans Condensed', sans-serif;
 @siteSecondFontFamily: 'Dosis', sans-serif;
 
-.transition(@transition){
+.transition(@transition) {
 	-webkit-transition: @transition;
 	-moz-transition: @transition;
 	-ms-transition: @transition;
@@ -14,25 +14,25 @@
 	transition: @transition;
 }
 
-.boxShadow(@context){
+.boxShadow(@context) {
   -webkit-box-shadow: @context;
   -moz-box-shadow: @context;
   box-shadow: @context;
 }
 
-.borderRadius(@context){
+.borderRadius(@context) {
 	border-radius: @context;
 	-moz-border-radius: @context;
 	-webkit-border-radius: @context;
 }
 
-.backgroundSize(@size){
+.backgroundSize(@size) {
   -webkit-background-size: @size;
   background-size: @size;
   -moz-background-size: @size;
 }
 
-.button-primary{
+.button-primary {
 	width: 300px;
 	height: 30px;
 	text-decoration: none;
@@ -46,7 +46,7 @@
 	background: transparent;
 	color: @colorWhite;
 	text-align: center;
-	&:hover{
+	&:hover {
 		border-color: @colorWhite;
 	}
 }
@@ -78,51 +78,51 @@
 @sm-max: 790px;
 @xs-max: 480px;
 
-html, body{
+html, body {
   margin: 0;
   padding: 0;
 	background-color: @colorPromenade;
 }
 
-&.stick{
-  .header{
+&.stick {
+  .header {
     padding-top: 5px;
     height: 127px;
     position: fixed;
     .boxShadow(0px 1px 7px 1px rgba(0,0,0,0.65));
     .transition(all .3s);
-    .photo{
-      img{
+    .photo {
+      img {
         width: 100px;
         height: 100px;
         .transition(all .2s);
       }
-      h2{
+      h2 {
         display: none;
         line-height: 20px;
       }
     }
   }
-  .page{
+  .page {
     padding-top: 380px;
   }
-  @media(max-width: @sm-max){
-    .header{
+  @media(max-width: @sm-max) {
+    .header {
       height: 97px;
-      .photo{
-        img{
+      .photo {
+        img {
           width: 70px;
           height: 70px;
         }
       }
     }
-    .page{
+    .page {
       padding-top: 350px;
     }
   }
 }
 
-.header{
+.header {
   width: 100%;
   height: 320px;
   padding-top: 50px;
@@ -134,97 +134,182 @@ html, body{
   text-align: center;
   position: absolute;
 
-  .photo{
-    img{
+  .photo {
+    img {
       width: 200px;
       height: 200px;
       .borderRadius(100px);
     }
-    h1,h2{
+    h1,h2 {
       color: @colorBlack;
       font-family: @siteFirstFontFamily;
       line-height: 24px;
       margin: 0;
       font-weight: 300;
     }
-    h1{
+    h1 {
       font-size: 20px;
     }
-    h2{
+    h2 {
       font-size: 26px;
     }
   }
 }
 
-.page{
+.page {
   padding-top: 370px;
   width: 100%;
   text-align: center;
 
-  .block{
+  .block {
     display: block;
     padding: 10px 50px;
-    @media(max-width: @sm-max){
+    @media(max-width: @sm-max) {
       padding: 10px 20px;
     }
-    @media(max-width: @xs-max){
+    @media(max-width: @xs-max) {
       padding: 0;
     }
 
-    &.about{
-      p{
-        span{
+    &.about {
+      p {
+        span {
           font-family: @siteFirstFontFamily;
-          &:nth-child(odd){
+          &:nth-child(odd) {
             color: @colorDeepBronze;
           }
-          &:nth-child(even){
+          &:nth-child(even) {
             color: @colorWoodBark;
           }
-          &.show{
+          &.show {
             font-size: 20px;
           }
-          &.me{
+          &.me {
             font-size: 26px;
           }
-          &.what{
+          &.what {
             font-size: 22px;
           }
-          &.you{
+          &.you {
             font-size: 26px;
           }
-          &.do{
+          &.do {
             font-size: 30px;
           }
-          &.not{
+          &.not {
             font-size: 48px;
             color: @colorBlack;
           }
-          &.say{
+          &.say {
             font-size: 22px;
           }
-          &:last-child{
+          &:last-child {
             font-size: 30px;
           }
         }
       }
     }
-
-    &.projects{
+		&.books {
       overflow: auto;
-      @media(max-width: @xs-max){
+      @media(max-width: @xs-max) {
         padding: 10px;
         overflow: hidden;
       }
 
-      h3{
+      h3 {
         font-family: @siteSecondFontFamily;
         font-size: 40px;
         font-weight: 500;
         background-color: darken(@colorPromenade, 10%);
       }
 
-      .project{
+      .book {
+        display: inline-table;
+        width: 30%;
+        min-height: 530px;
+        padding: 10px;
+        margin: 3px 0;
+        background-color: darken(@colorPromenade, 3%);
+        .transition(all .3s);
+
+        @media(max-width: @sm-max) {
+          width: 44%;
+        }
+        @media(max-width: @xs-max) {
+          width: 90%;
+        }
+
+        h4 {
+          font-family: @siteFirstFontFamily;
+          font-size: 26px;
+          color: @colorBlack;
+        }
+        .links {
+          display: none;
+
+					img {
+						display: inline-block;
+						width: 30px;
+					}
+
+          a {
+            font-family: @siteFirstFontFamily;
+            font-size: 26px;
+            color: @colorSteelBlue;
+            text-decoration: none;
+            font-weight: 500;
+            &:hover {
+              color: darken(@colorSteelBlue, 10%);
+            }
+
+						&.saraiva {
+              color: @colorRipeLemon;
+							font-weight: 600;
+							padding: 10px;
+            }
+          }
+        }
+        p {
+          img {
+						width: 150px;
+
+						@media(max-width: @xs-max) {
+		          width: 205px;
+		        }
+					}
+        }
+        .showLinks() {
+          .boxShadow(0px 1px 7px 1px rgba(0,0,0,0.65));
+          .links {
+            display: inline-block;
+          }
+        }
+        &:hover {
+          padding: 4px;
+          margin: 3px 6px;
+          .showLinks();
+        }
+        @media(max-width: @xs-max) {
+          .showLinks();
+        }
+      }
+    }
+
+    &.projects {
+      overflow: auto;
+      @media(max-width: @xs-max) {
+        padding: 10px;
+        overflow: hidden;
+      }
+
+      h3 {
+        font-family: @siteSecondFontFamily;
+        font-size: 40px;
+        font-weight: 500;
+        background-color: darken(@colorPromenade, 10%);
+      }
+
+      .project {
         display: inline-table;
         width: 30%;
         min-height: 280px;
@@ -233,129 +318,164 @@ html, body{
         background-color: darken(@colorPromenade, 3%);
         .transition(all .3s);
 
-        @media(max-width: @sm-max){
+        @media(max-width: @sm-max) {
           width: 44%;
         }
-        @media(max-width: @xs-max){
+        @media(max-width: @xs-max) {
           width: 90%;
         }
 
-        h4{
+        h4 {
           font-family: @siteFirstFontFamily;
           font-size: 26px;
           color: @colorBlack;
         }
-        .links{
+        .links {
           display: none;
-          a{
+          a {
             font-family: @siteFirstFontFamily;
             font-size: 26px;
             color: @colorSteelBlue;
             text-decoration: none;
             font-weight: 500;
-            &:hover{
+            &:hover {
               color: darken(@colorSteelBlue, 10%);
             }
           }
         }
-        p{
-          span{
+        p {
+          span {
             font-family: @siteSecondFontFamily;
             border-width: 2px;
             border-style: solid;
             color: @colorBlack;
             padding: 5px;
             line-height: 40px;
-            &.android{
+            &.android {
               border-color: @colorMantis;
             }
-            &.js{
+            &.js {
               border-color: @colorRipeLemon;
             }
-            &.css{
+            &.css {
               border-color: @colorVictoria;
             }
-            &.nodejs{
+            &.nodejs {
               border-color: @colorFruitSalad;
             }
-            &.less{
+            &.less {
               border-color: @colorCello;
             }
-            &.angularjs{
+            &.angularjs {
               border-color: @colorTotemPole;
             }
-            &.gulp{
+            &.gulp {
               border-color: @colorFlushMahogany;
             }
-            &.html{
+            &.html {
               border-color: @colorCinnabar;
             }
-						&.mysql{
+						&.mysql {
 							border-color: lighten(@colorCinnabar, 10%);
 						}
-            &.php{
+            &.php {
               border-color: @colorKashmirBlue;
             }
           }
         }
-        .showLinks(){
+        .showLinks() {
           .boxShadow(0px 1px 7px 1px rgba(0,0,0,0.65));
-          .links{
+          .links {
             display: inline-block;
           }
         }
-        &:hover{
+        &:hover {
           padding: 4px;
           margin: 3px 6px;
           .showLinks();
         }
-        @media(max-width: @xs-max){
+        @media(max-width: @xs-max) {
           .showLinks();
         }
       }
     }
 
-    &.contact{
-      h3{
+    &.contact {
+      h3 {
         font-family: @siteSecondFontFamily;
         font-size: 40px;
         font-weight: 500;
         background-color: lighten(@colorSquirrel, 10%);
 
-        @media(max-width: @xs-max){
+        @media(max-width: @xs-max) {
           font-size: 32px;
         }
       }
 
-      p{
-        a{
+      p {
+        a {
           color: @colorWoodBark;
           font-family: @siteFirstFontFamily;
           font-size: 40px;
           text-decoration: underline;
+
+					@media(max-width: @xs-max) {
+	          font-size: 32px;
+	        }
         }
       }
     }
   }
 }
 
-.footer{
+.footer {
   width: 100%;
   min-height: 100px;
   background-color: lighten(@colorSteelBlue, 28%);
   text-align: center;
+	margin-bottom: 50px;
 
-  ul{
+  ul {
     display: inline-block;
     padding: 0;
-    li{
+    li {
       display: inline;
-      a{
-        img{
+      a {
+        img {
           width: 50px;
           margin: 5px;
         }
       }
     }
   }
+}
+
+.language {
+	z-index: 999;
+	background-color: darken(@colorPromenade, 10%);
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	display: block;
+	font-size: 20px;
+	color: @colorMantis;
+	font-family: @siteSecondFontFamily;
+	cursor: pointer;
+	margin: auto;
+
+	span {
+		display: inline-block;
+		padding: 10px;
+
+		&.active {
+			color: @colorBlack;
+			font-weight: 600;
+		}
+	}
+}
+
+.en, .pt {
+	&.disabled {
+		display: none;
+	}
 }
