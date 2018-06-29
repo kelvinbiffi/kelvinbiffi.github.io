@@ -1,0 +1,144 @@
+// out: ../css/style.css, sourcemap: false, compress: true
+
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+@siteFirstFontFamily: 'Open Sans Condensed', sans-serif;
+@siteSecondFontFamily: 'Dosis', sans-serif;
+
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-ms-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+.boxShadow(@context) {
+  -webkit-box-shadow: @context;
+  -moz-box-shadow: @context;
+  box-shadow: @context;
+}
+
+.borderRadius(@context) {
+	border-radius: @context;
+	-moz-border-radius: @context;
+	-webkit-border-radius: @context;
+}
+
+.backgroundSize(@size) {
+  -webkit-background-size: @size;
+  background-size: @size;
+  -moz-background-size: @size;
+}
+
+.button-primary {
+	width: 300px;
+	height: 30px;
+	text-decoration: none;
+	font-weight: 300;
+	font-size: 24px;
+	font-family: @siteSecondFontFamily;
+	border: 2px solid @colorSteelBlue;
+	padding: 10px;
+	.borderRadius(50px);
+	cursor: pointer;
+	background: transparent;
+	color: @colorWhite;
+	text-align: center;
+	&:hover {
+		border-color: @colorWhite;
+	}
+}
+
+@colorWhite: #FFFFFF;
+@colorBlack: #100f0c;
+@colorSquirrel: #907d6b;
+@colorDeepBronze: #543e31;
+@colorWoodBark: #2f231c;
+@colorRope: #945e40;
+@colorPromenade: #f7f4e1;
+@colorPromenadeDark: darken(@colorPromenade, 20%);
+@colorCalico: #d4a980;
+@colorPinkLady: #f2d8b0;
+@colorSteelBlue: #477cab;
+
+@colorMantis: #77C159; //Android
+@colorRipeLemon: #F1D409; // Javascript
+@colorVictoria: #563D7C; //CSS
+@colorFruitSalad: #60A257; //NodeJS
+@colorCello: #1D365D; //LESS
+@colorTotemPole: #A6120D; //AngularJS
+@colorFlushMahogany: #CF4647; // GULP
+@colorCinnabar: #E34C26; //HTML - MySQL
+@colorKashmirBlue: #4F5D95; //PHP
+@colorEbonyClay: #232F3E;
+
+@colorGreenBackFade: #2f6f3b;
+@colorBackForm: #00303E;
+
+@lg-max: 1200px;
+@md-max: 992px;
+@sm-max: 790px;
+@xs-max: 480px;
+
+html, body {
+  margin: 0;
+  padding: 0;
+	background-color: @colorPromenade;
+}
+
+body {
+  // background-image: url('../images/coding.jpg');
+  background-repeat: repeat;
+}
+
+.backfade {
+  background-color: @colorGreenBackFade;
+  opacity: 0.5;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.info {
+  z-index: 99;
+  vertical-align: top;
+  position: fixed;
+  height: 100%;
+  width: 65%;
+
+  img {
+    width: 20%;
+    position: absolute;
+    right: 0;
+    margin: 3%;
+  }
+
+  h1 {
+    margin: 3%;
+    color: @colorRipeLemon;
+
+    p {
+      &:first-child {
+        font-size: 30px;
+      }
+      &:last-child {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.form {
+  z-index: 999;
+  background-color: @colorBackForm;
+  top: 1%;
+  right: 5%;
+  position: fixed;
+  width: 30%;
+  height: 99%;
+}
