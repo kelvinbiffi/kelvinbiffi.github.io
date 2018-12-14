@@ -1,0 +1,440 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('../images/bg_writing.jpg');
+  background-position: right;
+}
+
+/* HEADER STYLE */
+header {
+  margin-bottom: 100px;
+}
+
+header .on_lecture {
+  width: 100%;
+  height: 500px;
+  background-image: url('../images/bg_header.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: right;
+}
+
+header .on_lecture .logo {
+  display: inline-block;
+  margin: 20px;
+  width: 140px;
+}
+
+@media screen and (max-width: 700px) {
+  header .on_lecture .logo {
+    display: inline-block;
+    margin: 20px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .on_lecture .logo {
+    display: inline-block;
+    margin: 20px;
+    width: 100px;
+  }
+}
+
+header .on_lecture .about {
+  display: inline-block;
+  width: 30%;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.9);
+}
+
+@media screen and (max-width: 700px) {
+  header .on_lecture .about {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header .on_lecture .about {
+    width: 50%;
+  }
+}
+
+header .on_lecture .about span {
+  color: #FFFFFF;
+  font-family: Oswald,sans-serif;
+  font-size: 16px;
+  line-height: 2em;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+/* MAIN STYLE */
+
+.amazon {
+  width: 150px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  max-width: 100%;
+  margin: 15px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+h1 span {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.8);
+  width: 95%;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 26px;
+  color: #000000;
+  text-align: center;
+  padding: 1%;
+}
+
+.sinopse h2 {
+  margin: 5px 20px;
+  border-bottom: 1px solid #000;
+  padding: 5px;
+}
+
+.sinopse p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  text-align: left;
+  padding: 8px 20px;
+}
+
+.sinopse .texto {
+  text-align: left;
+  max-height: 600px;
+  -webkit-transition: max-height 2s;
+  transition: max-height 2s;
+}
+
+.sinopse .esconder {
+  display: none;
+  cursor: pointer;
+  padding: 15px;
+  
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+}
+
+.sinopse .mostrar {
+  display: none;
+  cursor: pointer;
+  padding: 15px;
+  
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+}
+
+@media screen and (max-width: 900px) {
+  .sinopse .texto {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .sinopse .mostrar {
+    display: none !important;
+  }
+  
+  .sinopse .esconder {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  
+  .sinopse .texto {
+    display: block;
+    max-height: 165px;
+    overflow: hidden;
+  }
+  
+  .sinopse .mostrar {
+    display: inline-block;
+  }
+}
+
+.sinopse.show .texto {
+  display: block;
+  max-height: 10000px;
+}
+
+.sinopse.show .mostrar {
+  display: none;
+}
+
+.sinopse.show .esconder {
+  display: inline-block;
+}
+
+
+/* LIVROS */
+main .livro {
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+main .livro .left {
+  vertical-align: top;
+  display: inline-block;
+  width: 29%;
+  text-align: left;
+}
+
+@media screen and (max-width: 500px) {
+  main .livro .left {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+main .livro .left img{
+  width: 200px;
+  max-width: 100%;
+}
+
+main .livro .right {
+  vertical-align: top;
+  display: inline-block;
+  width: 59%;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-left: 2%;
+}
+
+@media screen and (max-width: 500px) {
+  main .livro .right {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+/* PROJETOS */
+main .projects {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+main .projects .project {
+  display: inline-block;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 20px;
+}
+
+main .projects .project h2 a {
+  color: #000000;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+main .projects .project img {
+  max-width: 100%;
+  width: 120px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  min-height: 100px;
+  background-color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+footer .left {
+  vertical-align: top;
+  display: inline-block;
+  width: 40%;
+  text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+  footer .left {
+    width:49%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer .left {
+    width:100%;
+  }
+}
+
+footer ul {
+  display: inline-block;
+  padding: 0;
+  width: 330px;
+  text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+  footer ul {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+footer ul li {
+  display: inline;
+}
+
+footer ul li a {
+  
+}
+
+footer ul li a img {
+  width: 50px;
+}
+
+footer .right {
+  vertical-align: top;
+  display: inline-block;
+  width: 59%;
+  text-align: right;
+}
+
+@media screen and (max-width: 900px) {
+  footer .right {
+    width:49%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer .right {
+    width:100%;
+    text-align: center;
+  }
+}
+
+footer .contact {
+  display: inline-block;
+  padding: 0;
+  width: 330px;
+  text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+  footer .contact {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+footer .contact a {
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-color: #000000;
+}
+
+footer .contact span {
+  padding: 5px;
+  padding-left: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  text-align: left;
+  color: #000000;
+}
+
+@media screen and (max-width: 700px) {
+  footer .contact span {
+    text-align: center;
+  }
+}
+
+/* INSTAGRAM */
+#instagram {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  overflow: hidden;
+}
+
+#instagram .thumbex {
+  display: inline-block;
+  min-width: 100px;
+  max-width: 100px;
+  height: 100px;
+  width: 100px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  margin: 0 2px;
+  box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.5);
+}
+
+#instagram .thumbex .thumbnail {
+  overflow: hidden;
+  min-width: 100px;
+  height: 170px;
+  position: relative;
+  opacity: 0.88;
+  backface-visibility: hidden;
+  transition: all 0.4s ease-out;
+}
+
+#instagram .thumbex .thumbnail img {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  height: 115%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  backface-visibility: hidden;
+}
+
+#instagram .thumbex .thumbnail span {
+  position: absolute;
+  z-index: 2;
+  top: calc(100px - 20px);
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 50px;
+  margin: 0 45px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease-out;
+}
+
+#instagram .thumbex .thumbnail:hover {
+  backface-visibility: hidden;
+  transform: scale(1.15, 1.15);
+  opacity: 1;
+  z-index: 9999;
+}
+
+#instagram .thumbex .thumbnail:hover span {
+  opacity: 0;
+}
