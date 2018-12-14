@@ -438,3 +438,12 @@ footer .contact span {
 #instagram .thumbex .thumbnail:hover span {
   opacity: 0;
 }
+
+
+#_hj-f5b2a1eb-9b07_feedback[data-minimized-position="middle_right"] #_hj-f5b2a1eb-9b07_feedback_minimized {
+  bottom: 65px !important;
+}
+
+#_hj-f5b2a1eb-9b07_feedback ._hj-f5b2a1eb-9b07_feedback_minimized_label {
+background-color: #000000 !important;	
+}
