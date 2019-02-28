@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
 html, body {
     margin: 0;
     padding: 0;
+    background: #F1F1F1;
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 header {
@@ -15,18 +16,113 @@ header {
 
 header h1 {
     font-weight: 500;
-    font-size: 42px;
+    font-size: 32px;
     line-height: 34px;
     margin-top: 70px;
     margin-bottom: 36px;
     color: #333;
 }
 
+header h1 span {
+    display: inline-block
+}
+
+header h1 span::first-letter {
+    font-size: 56px;
+}
+
 header h2 {
     font-weight: 500;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 28px;
     margin-top: 0;
-    margin-bottom: 36px;
+    margin-bottom: 0;
     color: #333;
+}
+
+header h2::first-letter {
+    color: #007c89;
+    font-size: 34px;
+}
+
+main {
+    padding: 20px;
+}
+
+main section h2 {
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    padding-bottom: 18px;
+    border-bottom: 2px solid #b1b8c4;
+    position: relative;
+}
+
+main section h2::after {
+    display: block;
+    width: 60px;
+    height: 4px;
+    bottom: -3px;
+    content: "";
+    background: #007c89;
+    position: absolute;
+}
+
+main section.books article {
+    display: inline-block;
+}
+
+main section.books article + article {
+    margin-left: 20px;
+}
+
+main section.books .book {
+    display: inline-block;
+    padding-top: 0;
+    background: #FFFFFF;
+    padding: 35px 20px 45px;
+    width: 180px;
+    margin: 25px 0;
+    cursor: pointer;
+    border: 2px solid #cfd4db;
+    -webkit-box-shadow: 10px 10px 0 0 #cfd4db;
+    -moz-box-shadow: 10px 10px 0 0 #cfd4db;
+    box-shadow: 10px 10px 0 0 #cfd4db;
+}
+
+main section.books .book a {
+    text-decoration: none;
+}
+
+main section.books .book h6 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0;
+    color: #e91e63;
+}
+
+main section.books .book h6 span {
+    display: block;
+    font-size: 12px;
+    color: #666666;
+}
+
+main section.books .book .author {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #666;
+    margin: 0 0 6px;
+}
+
+main section.books .book .date {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+    color: #909090;
+    text-transform: uppercase;
 }
