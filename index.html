@@ -1,222 +1,132 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="images/ico.png" sizes="16x16">
-    <link rel="icon" type="image/x-icon" href="images/ico.png" sizes="16x16">
-    <link rel="apple-touch-icon-precomposed" href="images/ico.png">
-    <title>Kelvin's - Kelvin Baumhardt Biffi Leote</title>
-    <link rel="stylesheet" href="/css/estilo.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115021793-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="images/ico.png" sizes="16x16">
+        <link rel="icon" type="image/x-icon" href="images/ico.png" sizes="16x16">
+        <link rel="apple-touch-icon-precomposed" href="images/ico.png">
+        <title>Kelvin Batista Biffi Leote - Front-End | JavaScript | PHP | Software Engineer</title>
+        <meta name="description" content="Kelvin Batista Biffi Leote - Front-End | JavaScript | PHP | Software Engineer - I Make, Write and Code things">
+        <link rel="stylesheet" href="/css/portfolio.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115021793-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-      gtag('config', 'UA-115021793-1');
-    </script>
-    <!-- Hotjar Tracking Code for https://kelvins.cc -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:973387,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
-  </head>
-  <body>
-    <!-- HEADER -->
-    <header>
-      <div class="on_lecture">
-        <a href="/">
-          <img class="logo" src="images/kelvins_logo.png" alt="Kelvins Logo" />
-        </a>
-        <br>
-        <p class="about">
-          <span>"Apaixonado pela vida</span><br>
-          <span>"Pai</span><br>
-          <span>"Marido</span><br>
-          <span>"Empreendedor</span><br>
-          <span>"Escritor</span><br>
-          <span>"Desenvolver</span><br>
-          <span>"Sonhador</span>
-        </p>
-      </div>
-    </header>
-    
-    <!-- MAIN -->
-    <main>
-      
-      <h1>
-        <span>
-          LIVROS
-        </span>
-      </h1>
-      
-      <!-- MIKA & SCOTTIE -->
-      <section class="livro">
-        <div class="left">
-            <a href="https://amzn.to/2ythXhD" target="_blank">
-              <img src="images/books/mika_e_scottie.jpg" alt="Mika & Scottie McGregorye" />
-            </a>
-        </div>
+            gtag('config', 'UA-115021793-1');
+        </script>
+        <!-- Hotjar Tracking Code for https://kelvins.cc -->
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:973387,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>
+                <span>Kelvin</span> <span>Batista</span> <span>Biffi</span> <span>Leote</span>
+            </h1>
+            <h2>Front-End | JavaScript | PHP | Software Engineer</h2>
+        </header>
+        <!-- Main -->
+        <main>
+            <!-- Contact Section -->
+            <section id="contact" class="contact">
+                <h2>Contacts</h2>
+                <ul>
+                    <li><a href="https://github.com/kelvinbiffi" target="_blank"><img src="images/github.png" alt="GITHUB"></a></li>
+                    <li><a href="https://www.linkedin.com/in/kelvinbiffi/" target="_blank"><img src="images/linkedin.png" alt="LINKEDIN"></a></li>
+                    <li><a href="https://www.facebook.com/KelvinBaumhardt/" target="_blank"><img src="images/facebook.png" alt="FACEBOOK"></a></li>
+                    <li><a href="https://www.instagram.com/kelvinbiffi/" target="_blank"><img src="images/instagram.png" alt="INSTAGRAM"></a></li>
+                    <li><a href="https://twitter.com/kelvinbiffi" target="_blank"><img src="images/twitter.png" alt="TWITTER"></a></li>
+                </ul>
+                <div class="direct">
+                    <a href="mailto:kelvinbiffi@gmail.com"><span>kelvinbiffi@gmail.com</span><br></a>
+                    <a href="tel:+5551993005029"><span>+55 51 99300-5029</span></a>
+                </div>
+            </section>
+            
+            <!-- Books Section -->
+            <section id="books" class="books">
+                <h2>Books</h2>
+                <!-- Mika & Scottie -->
+                <article>
+                    <div class="book">
+                        <a href="https://amzn.to/2ythXhD" target="_blank" class="margin-top-0 book-1">
+                            <h3>Mika & Scottie McGregorye<span>(Portuguese)</span></h3>
+                            <p class="author">_by Me</p>
+                            <p class="date">Published October 2018</p>
+                        </a>
+                    </div>
+                </article>
+                <!-- JavaScript -->
+                <article>
+                    <div class="book">
+                        <a href="https://amzn.to/2KgAVB3" target="_blank" class="margin-top-0 book-1">
+                            <h3>Javascript: Básico ao Avançado<span>(Portuguese)</span></h3>
+                            <p class="author">_by Me</p>
+                            <p class="date">Published June 2018</p>
+                        </a>
+                    </div>
+                </article>
+                <!-- O Nenino Dentor da Cartola -->
+                <article>
+                    <div class="book">
+                        <a href="https://amzn.to/2uoHBTo" target="_blank" class="margin-top-0 book-1">
+                            <h3>O Menino Dentro da Cartola de Retalhos<span>(Portuguese)</span></h3>
+                            <p class="author">_by Me</p>
+                            <p class="date">Published May 2018</p>
+                        </a>
+                    </div>
+                </article>
+                
+            </section>
+            
+            <!-- Projects Section -->
+            <section id="projects" class="projects">
+                <h2>Apps/Web Apps</h2>
+                <!-- Zoeira -->
+                <article>
+                    <div class="project">
+                        <a href="http://bit.ly/zoeira_jogo" target="_blank" class="margin-top-0 book-1">
+                            <h3>Zoeira<span>(Portuguese)</span></h3>
+                            <p class="author">_by Me</p>
+                            <p class="date">Last Update March 2018</p>
+                        </a>
+                    </div>
+                </article>
+                <!-- Mario Text -->
+                <article>
+                    <div class="project">
+                        <a href="http://bit.ly/2VqpB6n" target="_blank" class="margin-top-0 book-1">
+                            <h3>Super Mario Text Generator</h3>
+                            <p class="author">_by Me</p>
+                            <p class="date">Released February 2019</p>
+                        </a>
+                    </div>
+                </article>
+            </section>
+            
+            <!-- Coding Section -->
+            <section id="coding" class="coding">
+                <h2>Coding</h2>
+                <!-- Repos will be load by JS Using GITHUB API -->
+            </section>
+        </main>
+        <footer>
+            
+        </footer>
         
-        <div class="right">
-          <article class="sinopse">
-            <h2>
-              Mika & Scottie McGregorye
-            </h2>
-            <div class="texto">
-              <p>
-                  "Naquela noite as folhas das árvores estavam balançando mais do que o normal, a noite falava através do vento frio que assobiava e balançava as cortinas bordos da sacada. Scottie estava parado de frente para a bancada de bebidas, que algum dia estivera cheia, mas agora apenas poucas garrafas empoeiradas existia. Ele estava virado de costas para onde eu me encontrava, em uma posição que eu não podia enxergar seu rosto.
-              </p>
-              <p>
-                  O cheiro de café era nítido no ambiente, trazendo uma sensação de conforto, entretanto aos poucos deixava de existir, diferente do ar gélido que teimosamente entrava através das brechas existentes naquele quarto semi iluminado. Eu podia sentir de onde eu estava, que o calor daquele quarto começava a se dissipar."
-              </p>
-              <p>
-                  ~ Mika e Scottie McGregorye
-              </p>
-            </div>
-            <button class="mostrar">Mostrar Mais ...</button>
-            <button class="esconder">Mostrar Menos -</button>
-          </article>
-          <p>
-            <a href="https://amzn.to/2ythXhD" target="_blank">
-              <img class="amazon" src="images/amazon.jpg" alt="Amazon" />
-            </a>
-          </p>
-        </div>
-        
-      </section>
-        
-      <!-- JavaScript -->
-      <section class="livro">
-        <div class="left">
-            <a href="http://amzn.to/2KgAVB3" target="_blank">
-              <img src="images/books/Javascript.jpg" alt="Javascript: Básico ao Avançado" />
-            </a>
-        </div>
-        
-        <div class="right">
-          <article class="sinopse">
-            <h2>
-              Javascript: Básico ao Avançado
-            </h2>
-            <div class="texto">
-              <p>
-                Este é um livro que explica a linguagem de programação Javascript desde os comandos mais básicos até os conceitos mais complexos com o auxilio de diversos exemplos práticos.
-              </p>
-              <p>
-                Durante o percurso da leitura deste livro você verá os princípios da lógica de programação, passando por conceitos básicos necessários para que se possa ter um total entendimento do que se trata a programação em seu todo. Após saber como funciona a linguagem e tendo um conhecimento básico sobre a mesma você começará a entrar no mundo do Javascript e verá como ele realmente trabalha por baixo dos panos.
-              </p>
-              <p>
-                Chegando neste ponto você já estará apto a criar a lógica de seu próprios aplicativos e sites, porém não terá o conhecimento completo da linguagem ainda, pois é aqui, que as coisas esquentam de verdade e entramos no coração da linguagem para nos aprofundamos nos conceitos mais fortes da linguagem que são os objetos e funções, passando por Closures, IIFE, Prototype e assim terá uma total compreensão de o porque que o Javascript é a linguagem de programação que está dominando o mercado de TI.
-              </p>
-            </div>
-            <button class="mostrar">Mostrar Mais ...</button>
-            <button class="esconder">Mostrar Menos -</button>
-          </article>
-          <p>
-            <a href="http://amzn.to/2KgAVB3" target="_blank">
-              <img class="amazon" src="images/amazon.jpg" alt="Amazon" />
-            </a>
-          </p>
-        </div>
-        
-      </section>
-      
-      <!-- O Menino Dentro da Cartola -->
-      <section class="livro">
-        <div class="left">
-            <a href="http://amzn.to/2J6wPtB" target="_blank">
-              <img src="images/books/o_menino_dentro_da_cartola.jpg" alt="O Menino Dentro da Cartola de Retalhos" />
-            </a>
-        </div>
-        
-        <div class="right">
-          <article class="sinopse">
-            <h2>
-              O Menino Dentro da Cartola de Retalhos
-            </h2>
-            <div class="texto">
-              <p>
-                  Entre os deveres da escola e a casa de sua avó, um garoto terá que aprender a controlar uma força que nunca imaginaria que teria um dia, além de descobrir segredos que irão assolar seu conhecimento de tudo o que existe e que permeiam sua família há gerações.
-              </p>
-            </div>
-            <button class="mostrar">Mostrar Mais ...</button>
-            <button class="esconder">Mostrar Menos -</button>
-          </article>
-          <p>
-            <a href="http://amzn.to/2J6wPtB" target="_blank">
-              <img class="amazon" src="images/amazon.jpg" alt="Amazon" />
-            </a>
-          </p>
-        </div>
-        
-      </section>
-      
-      <h1>
-        <span>
-          PROJETOS
-        </span>
-      </h1>
-      
-      <section class="projects">
-        <!-- Zoeira -->
-        <div class="project">
-          <h2>
-            <a href="http://bit.ly/zoeira_jogo" target="_blank">
-              Zoeira
-            </a>
-          </h2>
-          <a href="http://bit.ly/zoeira_jogo" target="_blank">
-            <img src="https://zoeira.kelvins.cc/images/zoeiraround.png" alt="Zoeira" style="width:150px;max-width: 100%;" />
-          </a>
-        </div>
-      
-        <!-- Compra Ou Vende -->
-        <div class="project">
-          <h2>
-            <a href="http://bit.ly/2y7ql6t" target="_blank">
-              Compra Ou Vende
-            </a>
-          </h2>
-          <a href="http://bit.ly/2y7ql6t" target="_blank">
-            <img src="https://www.compraouvende.com.br/static/images/CEV_mini.png" alt="COUV" style="width:150px;max-width: 100%;" />
-          </a>
-        </div>
-      </section>
-      
-    </main>
-    
-    <!-- FOOTER -->
-    <footer>
-      <div class="left">
-        <!-- INSTAGRAM -->
-        <section id="instagram">
-          <!-- HTML Will be append here by JS Script -->
-        </section>
-      </div>
-      <div class="right">
-        <ul>
-          <li><a href="https://github.com/kelvinbiffi" target="_blank"><img src="images/github.png" alt="GITHUB"></a></li>
-          <li><a href="https://www.linkedin.com/in/kelvinbiffi/" target="_blank"><img src="images/linkedin.png" alt="LINKEDIN"></a></li>
-          <li><a href="https://www.facebook.com/KelvinBaumhardt/" target="_blank"><img src="images/facebook.png" alt="FACEBOOK"></a></li>
-          <li><a href="https://www.instagram.com/kelvinbiffi/" target="_blank"><img src="images/instagram.png" alt="INSTAGRAM"></a></li>
-          <li><a href="https://twitter.com/kelvinbiffi" target="_blank"><img src="images/twitter.png" alt="TWITTER"></a></li>
-        </ul>
-        <br>
-        <div class="contact">
-          <a href="mailto:kelvinbiffi@gmail.com"><span>kelvinbiffi@gmail.com</span><br></a>
-          <a href="tel:+5551993005029"><span>+55 51 99300-5029</span></a>
-        </div>
-      </div>
-    </footer>
-    <script src="js/site.js"></script>
-  </body>
+        <script src="js/portfolio.js"></script>
+    </body>
 </html>

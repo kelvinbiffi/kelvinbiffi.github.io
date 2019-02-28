@@ -6,10 +6,15 @@ html, body {
     background: #F1F1F1;
 }
 
+body {
+    padding: 0 70px;
+}
+
 * {
     font-family: 'Roboto Slab', serif;
 }
 
+/* HEADER */
 header {
     padding: 20px;
 }
@@ -45,6 +50,7 @@ header h2::first-letter {
     font-size: 34px;
 }
 
+/* MAIN */
 main {
     padding: 20px;
 }
@@ -70,15 +76,47 @@ main section h2::after {
     position: absolute;
 }
 
-main section.books article {
+/* CONTACTS */
+main section.contact {
+}
+
+main section.contact ul {
+    padding: 0;
+    list-style: none;
+    margin: 25px 0;
+}
+
+main section.contact ul li {
     display: inline-block;
 }
 
-main section.books article + article {
+main section.contact ul li + li {
+    margin-left: 5px;
+}
+
+main section.contact ul li img {
+    width: 50px;
+}
+
+main section.contact .direct {
+    margin: 25px 0;
+}
+
+main section.contact .direct a, main section.contact .direct span {
+    color: #333333;
+    font-size: 24px;
+}
+
+/* BOOKS / PROJECTS */
+main section.books article, main section.projects article {
+    display: inline-block;
+}
+
+main section.books article + article, main section.projects article + article {
     margin-left: 20px;
 }
 
-main section.books .book {
+main section.books .book, main section.projects .project {
     display: inline-block;
     padding-top: 0;
     background: #FFFFFF;
@@ -92,11 +130,11 @@ main section.books .book {
     box-shadow: 10px 10px 0 0 #cfd4db;
 }
 
-main section.books .book a {
+main section.books .book a, main section.projects .project a {
     text-decoration: none;
 }
 
-main section.books .book h6 {
+main section.books .book h3, main section.projects .project h3 {
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
@@ -104,13 +142,13 @@ main section.books .book h6 {
     color: #e91e63;
 }
 
-main section.books .book h6 span {
+main section.books .book h3 span, main section.projects .project h3 span {
     display: block;
     font-size: 12px;
     color: #666666;
 }
 
-main section.books .book .author {
+main section.books .book .author, main section.projects .project .author {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
@@ -118,11 +156,89 @@ main section.books .book .author {
     margin: 0 0 6px;
 }
 
-main section.books .book .date {
+main section.books .book .date, main section.projects .project .date {
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     margin: 0;
     color: #909090;
     text-transform: uppercase;
+}
+
+/* CODING */
+main section.coding article {
+    display: block;
+    padding-top: 0;
+    background: #FFFFFF;
+    padding: 35px 20px 45px;
+    width: 100%;
+    margin: 25px 0;
+    cursor: pointer;
+    border: 2px solid #cfd4db;
+    -webkit-box-shadow: 10px 10px 0 0 #cfd4db;
+    -moz-box-shadow: 10px 10px 0 0 #cfd4db;
+    box-shadow: 10px 10px 0 0 #cfd4db;
+    box-sizing: border-box;
+}
+
+main section.coding article h3 {
+    color: #007c89;
+    font-size: 20px;
+    overflow-wrap: break-word;
+}
+
+main section.coding article h3::first-letter {
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+main section.coding article a {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid #cfd4db;
+    margin: 15px;
+    margin-left: 0;
+    padding: 15px;
+    color: #007c89;
+}
+
+@media only screen and (max-width: 917px) {
+    main section.books article:nth-child(even), main section.projects article:nth-child(even) {
+        margin-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 683px) {
+    main section.books article + article, main section.projects article + article {
+        margin: auto;
+    }
+    
+    main section.books article:nth-child(even), main section.projects article:nth-child(even) {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    body {
+        padding: 0 30px;
+    }
+
+    header h1 span {
+        display: block
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    body {
+        padding: 0;
+    }
+    
+    main section.contact ul li + li {
+        margin-left: 0;
+    }
+    
+    main section.books .book, main section.projects .project, main section.books article, main section.projects article {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
