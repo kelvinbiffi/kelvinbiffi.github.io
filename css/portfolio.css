@@ -167,8 +167,9 @@ main section.books .book .date, main section.projects .project .date {
 
 /* CODING */
 main section.coding article {
-    display: block;
+    display: inline-block;
     padding-top: 0;
+    vertical-align: middle;
     background: #FFFFFF;
     padding: 35px 20px 45px;
     width: 100%;
@@ -179,6 +180,16 @@ main section.coding article {
     -moz-box-shadow: 10px 10px 0 0 #cfd4db;
     box-shadow: 10px 10px 0 0 #cfd4db;
     box-sizing: border-box;
+}
+
+main section.coding article:nth-child(even) {
+    width: 49%;
+    margin-right: 0.5%;
+}
+
+main section.coding article:nth-child(odd) {
+    width: 49%;
+    margin-left: 0.5%;
 }
 
 main section.coding article h3 {
@@ -205,6 +216,16 @@ main section.coding article a {
 @media only screen and (max-width: 917px) {
     main section.books article:nth-child(even), main section.projects article:nth-child(even) {
         margin-left: 15px;
+    }
+
+    main section.coding article:nth-child(even) {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    main section.coding article:nth-child(odd) {
+        width: 100%;
+        margin-left: 0;
     }
 }
 
