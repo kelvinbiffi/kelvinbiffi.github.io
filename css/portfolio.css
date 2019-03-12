@@ -184,7 +184,7 @@ main section.coding article {
     padding: 35px 20px 45px;
     width: 100%;
     margin: 25px 0;
-    cursor: pointer;
+    cursor: default;
     border: 2px solid #cfd4db;
     -webkit-box-shadow: 10px 10px 0 0 #cfd4db;
     -moz-box-shadow: 10px 10px 0 0 #cfd4db;
@@ -231,6 +231,16 @@ main section.coding article a {
     margin-left: 0;
     padding: 15px;
     color: #007c89;
+}
+
+main section.coding article .lang {
+    color: #e91e63;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+    border: 2px solid #e91e63;
+    overflow-wrap: break-word;
 }
 
 @media only screen and (max-width: 917px) {

@@ -9,13 +9,27 @@
     repoSection: document.querySelector('main section.coding')
   };
   
-  const handleRepository = (repo) => {
+  const handleRepository = async (repo) => {
+    let languages = await (await (fetch(`https://api.github.com/repos/${repo.full_name}/languages`)
+      .then(response => {
+        return response.json()
+      })
+      .catch(error => {
+        console.log('Error: ', error)
+      })
+    ));
+    
+    languages = Object.keys(languages).map(function(key) {
+      return `<span class="lang">${key}</span>`;
+    }).join('');
+    
     const coding = `
       <article>
         <h3>${repo.name}</h3>
         <p>${repo.description ? repo.description : ''}</p>
         <a href="${repo.html_url}">GITHUB</a>
-        ${repo.homepage ? `<a href="${repo.homepage}" target="_blank">LIVE VIEW</a>` : ''}
+        ${repo.homepage ? `<a href="${repo.homepage}" target="_blank">LIVE VIEW</a>` : ''}<br>
+        ${languages != '' ? languages : ''}
       </article>
     `;
     elements.repoSection.insertAdjacentHTML('beforeend', coding);
