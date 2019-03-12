@@ -2,6 +2,8 @@
  * Portfolio JavaScript
  */
 (function () {
+  const user = 'kelvinbiffi';
+  
   /**
    * Elements Page
    */
@@ -10,7 +12,7 @@
   };
   
   const handleRepository = async (repo) => {
-    let languages = await (await (fetch(`https://api.github.com/repos/${repo.full_name}/languages`)
+    let languages = await (await (fetch(`https://api.github.com/repos/${user}/${repo.name}/languages`)
       .then(response => {
         return response.json()
       })
@@ -35,7 +37,7 @@
     elements.repoSection.insertAdjacentHTML('beforeend', coding);
   };
   
-  fetch('https://api.github.com/users/kelvinbiffi/repos').then((response) => {
+  fetch(`https://api.github.com/users/${user}/repos`).then((response) => {
     const contentType = response.headers.get("content-type");
     if(contentType && contentType.indexOf("application/json") > -1) {
       return response.json().then((json) => {
