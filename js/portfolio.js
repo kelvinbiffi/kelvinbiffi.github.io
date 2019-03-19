@@ -11,7 +11,30 @@
    */
   const elements = {
     skillSection: document.querySelector('main section.skills'),
-    repoSection: document.querySelector('main section.coding')
+    repoSection: document.querySelector('main section.coding'),
+    bullets: '.bullets',
+  };
+
+  /**
+   * Hanlde Skyll Section
+   * 
+   * @param {String} key
+   */
+  const handleSkills = (key) => {
+    if (skills[key]) {
+      skills[key] = skills[key] + 1;
+      document.querySelector(`.${key} .bullets`).insertAdjacentHTML('beforeend', '<span></span>');
+    } else {
+      skills[key] = 1;
+      elements.skillSection.insertAdjacentHTML('beforeend', `
+        <div class="skill ${key}">
+          ${key} 
+          <div class="bullets">
+            <span></span>
+          </div>
+        </div>
+      `);
+    }
   };
   
   /**
@@ -24,12 +47,12 @@
         return response.json()
       })
       .catch(error => {
-        console.log('Error: ', error)
+        console.warn('Error: ', error)
       })
     ));
     
     languages = Object.keys(languages).map((key) => {
-      skills[key] = (skills[key] ? skills[key] + 1 : 1);
+      handleSkills(key);
       return `<span class="lang">${key}</span>`;
     }).join('');
     
@@ -44,19 +67,6 @@
     `;
     elements.repoSection.insertAdjacentHTML('beforeend', coding);
   };
-
-  const handleSkills = () => {
-    const htmlSkills = Object.keys(skills).map((skill) => {
-      return `<div class="skill">
-                ${skill} 
-                <div class="bullets">
-                  ${new Array(skills[skill]+1).join('<span></span>')}
-                </div>
-              </div>`;
-    }).join('');
-
-    elements.skillSection.insertAdjacentHTML('beforeend', htmlSkills);
-  };
   
   fetch(`https://api.github.com/users/${user}/repos`).then( async(response) => {
     const contentType = response.headers.get("content-type");
@@ -66,8 +76,6 @@
         for(; i < json.length; i++) {
           await handleRepository(json[i]);
         }
-
-        handleSkills();
       });
     } else {
       console.warn("Oops, we haven't got JSON!");
