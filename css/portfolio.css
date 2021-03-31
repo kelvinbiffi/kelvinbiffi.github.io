@@ -7,16 +7,31 @@ html, body {
 }
 
 body {
-    padding: 0 70px;
+    padding: 0;
+    text-align: center;
 }
 
 * {
     font-family: 'Roboto Slab', serif;
 }
 
+main {
+    display: block;
+    width: 800px;
+    margin: auto;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
 /* HEADER */
 header {
+    display: block;
+    width: 800px;
+    margin: auto;
     padding: 20px;
+    text-align: left;
+    box-sizing: border-box;
 }
 
 header h1 {
@@ -51,17 +66,13 @@ header h2::first-letter {
 }
 
 /* MAIN */
-main {
-    padding: 20px;
-}
 
 main section h2 {
     font-weight: 500;
-    font-size: 36px;
-    margin: 0;
-    padding: 0;
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
     color: #333333;
-    padding-bottom: 18px;
     border-bottom: 2px solid #b1b8c4;
     position: relative;
 }
@@ -71,14 +82,9 @@ main section h2 span {
     color: #e91e63;
 }
 
-main section h2::after {
-    display: block;
-    width: 60px;
-    height: 4px;
-    bottom: -3px;
-    content: "";
-    background: #007c89;
-    position: absolute;
+main section h2::first-letter {
+    color: #007c89;
+    font-size: 34px;
 }
 
 /* CONTACTS */
@@ -139,6 +145,7 @@ main section.books article + article, main section.projects article + article {
 }
 
 main section.books .book, main section.projects .project {
+    vertical-align: top;
     display: inline-block;
     padding-top: 0;
     background: #FFFFFF;
@@ -266,6 +273,10 @@ main section.coding article .lang {
 }
 
 @media only screen and (max-width: 917px) {
+    main, header {
+        width: 100%;
+        padding: 20px;
+    }
 
     main section.books article:nth-child(even), main section.projects article:nth-child(even) {
         margin-left: 15px;
