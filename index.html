@@ -1,31 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/ico.png" sizes="16x16">
-    <link rel="icon" href="images/ico.png" sizes="16x16">
-    <link rel="apple-touch-icon-precomposed" href="images/ico.png">
     <title>Kelvin Baumhardt Biffi - Escritor e Engenheiro de Software</title>
     <meta name="description" content="Kelvin Baumhardt Biffi - Escritor e Engenheiro de Software - I Make, Write and Code things">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/ico.png" sizes="16x16">
+    <link rel="icon" href="/images/ico.png" sizes="16x16">
+    <link rel="apple-touch-icon-precomposed" href="/images/ico.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        /* Custom Font Families */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* FadeIn Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Lazy Loading Placeholder */
+        .lazyload {
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+        }
+        .lazyloaded {
+            opacity: 1;
+        }
+
+        /* Header Background Overlay */
+        .header-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive Image Heights */
+        .object-cover-custom {
+            height: 240px;
+        }
+        @media (min-width: 768px) {
+            .object-cover-custom {
+                height: 300px;
+            }
+        }
+
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+            overflow: hidden;
+            max-height: 0;
+        }
+        #mobile-menu.show {
+            max-height: 500px; /* Arbitrary max-height to allow the menu to expand */
+        }
+    </style>
+    
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),   dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MBGSK3X');</script>
-        <!-- End Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MBGSK3X');
+    </script>
+    <!-- End Google Tag Manager -->
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115021793-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-115021793-1');
     </script>
-    <!-- Hotjar Tracking Code for https://kelvins.cc -->
+    
+    <!-- Hotjar Tracking Code -->
     <script>
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -37,149 +116,295 @@
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
 </head>
-<body class="bg-gray-100 text-center">
+<body class="bg-gray-100 text-left pt-16" data-new-gr-c-s-check-loaded="14.1199.0" data-gr-ext-installed="" cz-shortcut-listen="true">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBGSK3X"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBGSK3X" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
-
+    
+    <!-- Navigation Bar -->
+    <nav class="w-full bg-white shadow fixed top-0 left-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-pink-500">Kelvin Biffi</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#contact" class="text-gray-700 hover:text-pink-500 transition-colors">Contatos</a></li>
+                <li><a href="#books" class="text-gray-700 hover:text-pink-500 transition-colors">Livros</a></li>
+                <li><a href="#projects" class="text-gray-700 hover:text-pink-500 transition-colors">Projetos</a></li>
+                <li><a href="#courses" class="text-gray-700 hover:text-pink-500 transition-colors">Cursos</a></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-pink-500 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                         viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <li><a href="#contact" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Contatos</a></li>
+            <li><a href="#books" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Livros</a></li>
+            <li><a href="#projects" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Projetos</a></li>
+            <li><a href="#courses" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Cursos</a></li>
+        </ul>
+    </nav>
+    
     <!-- Header -->
-    <header class="w-full max-w-2xl mx-auto p-8 text-left">
-        <img src="./images/me.jpg" alt="KELVIN BAUMHARDT BIFFI" class="mb-8 w-40 rounded-full">
-        <h1 class="font-medium text-2xl leading-none mb-9 text-gray-800">
-            <span class="block">Kelvin</span>
-            <span class="block">Baumhardt</span>
-            <span class="block">Biffi</span>
-        </h1>
-        <h2 class="font-medium text-lg leading-none text-gray-800">
-            Escritor e Engenheiro de Software
-        </h2>
+    <header id="home" class="w-full max-w-6xl mx-auto p-8 relative bg-cover bg-right bg-no-repeat rounded-lg header-overlay animate-fadeIn" style="background-image: url('/images/header-bg.png');">
+        <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div> <!-- Overlay -->
+        <div class="relative z-10">
+            <img src="/images/me.jpg" data-src="/images/me.jpg" alt="Foto de Kelvin Baumhardt Biffi sorrindo" class="mb-8 w-40 rounded-full border-4 border-white shadow-lg lazyload">
+            <h1 class="font-semibold text-3xl md:text-4xl lg:text-5xl leading-tight mb-4 text-white animate-fadeIn">
+                <span class="block">Kelvin</span>
+                <span class="block">Baumhardt</span>
+                <span class="block">Biffi</span>
+            </h1>
+            <h2 class="font-medium text-lg md:text-xl lg:text-2xl leading-none text-gray-200">
+                Escritor e Engenheiro de Software
+            </h2>
+        </div>
     </header>
-
-    <!-- Main -->
-    <main class="w-full max-w-2xl mx-auto p-8 text-left box-border">
+    
+    <!-- Main Content -->
+    <main class="w-full max-w-6xl mx-auto p-8 box-border">
         <!-- Contact Section -->
-        <section id="contact" class="contact mb-12">
-            <h2 class="font-medium text-xl mb-4 text-gray-800 border-b-2 border-gray-400">Contatos</h2>
+        <section id="contact" class="contact mb-12" data-aos="fade-up">
+            <h2 class="font-medium text-2xl mb-6 text-gray-800 border-b-2 border-gray-400">Contatos</h2>
             <ul class="flex flex-wrap justify-start space-x-4 mb-8">
-                <li><a href="https://www.instagram.com/kelvinbiffi/" target="_blank"><img src="images/instagram.png" alt="INSTAGRAM" class="w-12"></a></li>
-                <li><a href="https://www.linkedin.com/in/kelvinbiffi/" target="_blank"><img src="images/linkedin.png" alt="LINKEDIN" class="w-12"></a></li>
-                <li><a href="https://github.com/kelvinbiffi" target="_blank"><img src="images/github.png" alt="GITHUB" class="w-12"></a></li>
+                <li>
+                    <a href="https://www.instagram.com/kelvinbiffi/" target="_blank" aria-label="Instagram">
+                        <img src="/images/instagram.png" alt="Instagram de Kelvin Baumhardt Biffi" class="w-12 h-12 object-contain lazyload" data-src="/images/instagram.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kelvinbiffi/" target="_blank" aria-label="LinkedIn">
+                        <img src="/images/linkedin.png" alt="LinkedIn de Kelvin Baumhardt Biffi" class="w-12 h-12 object-contain lazyload" data-src="/images/linkedin.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/kelvinbiffi" target="_blank" aria-label="GitHub">
+                        <img src="/images/github.png" alt="GitHub de Kelvin Baumhardt Biffi" class="w-12 h-12 object-contain lazyload" data-src="/images/github.png">
+                    </a>
+                </li>
             </ul>
             <div class="direct text-lg">
-                <a href="mailto:kelvinbiffi.developer@gmail.com" class="block text-gray-800">kelvinbiffi.developer@gmail.com</a>
+                <a href="mailto:kelvinbiffi.developer@gmail.com" class="block text-gray-800 hover:text-pink-500 transition-colors">kelvinbiffi.developer@gmail.com</a>
             </div>
         </section>
-
+    
         <!-- Books Section -->
-        <section id="books" class="books mb-12">
-            <h2 class="font-medium text-xl mb-4 text-gray-800 border-b-2 border-gray-400">Livros</h2>
-            <article class="mb-6">
-                <div class="book p-4 border-2 border-gray-300 bg-white shadow-lg transform transition-transform hover:scale-105">
-                    <a href="https://www.amazon.com.br/dp/B0DG32258Z" target="_blank">
-                        <h3 class="text-lg font-medium text-pink-500">
-                            Algoritmo para Leigos
-                        </h3>
-                        <h2 class="text-sm font-normal text-pink-500">
-                            Descomplicando a Resolução de Problemas
-                        </h2>
-                        <p class="author text-gray-600">_by Me</p>
-                        <p class="date text-xs text-gray-500 uppercase">Publicado Setembro 2024</p>
-                    </a>
-                </div>
-            </article>
-            <article class="mb-6">
-                <div class="book p-4 border-2 border-gray-300 bg-white shadow-lg transform transition-transform hover:scale-105">
-                    <a href="https://economopolis.com.br/" target="_blank">
-                        <h3 class="text-lg font-medium text-pink-500">Economópolis</h3>
-                        <p class="author text-gray-600">_by Me</p>
-                        <p class="date text-xs text-gray-500 uppercase">Publicado Julho 2024</p>
-                    </a>
-                </div>
-            </article>
-            <article class="mb-6">
-                <div class="book p-4 border-2 border-gray-300 bg-white shadow-lg transform transition-transform hover:scale-105">
-                    <a href="https://www.amazon.com.br/Menino-Dentro-Cartola-Retalhos-ebook/dp/B0CW1CSD1N" target="_blank">
-                        <h3 class="text-lg font-medium text-pink-500">O Menino Dentro da Cartola de Retalhos</h3>
-                        <p class="author text-gray-600">_by Me</p>
-                        <p class="date text-xs text-gray-500 uppercase">Publicado Julho  2024</p>
-                    </a>
-                </div>
-            </article>
-            <article class="mb-6">
-                <div class="book p-4 border-2 border-gray-300 bg-white shadow-lg transform transition-transform hover:scale-105">
-                    <a href="https://www.amazon.com.br/dp/B0BS9VQTJW/" target="_blank">
-                        <h3 class="text-lg font-medium text-pink-500">Javascript</h3>
-                        <h2 class="text-sm font-normal text-pink-500">
-                            Básico ao Avançado
-                        </h2>
-                        <p class="author text-gray-600">_by Me</p>
-                        <p class="date text-xs text-gray-500 uppercase">Publicado Junho 2018</p>
-                    </a>
-                </div>
-            </article>
+        <section id="books" class="books mb-12" data-aos="fade-up">
+            <h2 class="font-medium text-2xl mb-6 text-gray-800 border-b-2 border-gray-400">Livros</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Book 1 -->
+                <article>
+                    <div class="book bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl">
+                        <a href="https://www.amazon.com.br/dp/B0DG32258Z" target="_blank">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="/images/books/algoritmo-para-leigos.jpg" alt="Capa do livro 'Algoritmo para Leigos'" class="w-full object-cover object-center object-cover-custom lazyload">
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium text-pink-500">Algoritmo para Leigos</h3>
+                                <h4 class="text-sm font-normal text-pink-500">Descomplicando a Resolução de Problemas</h4>
+                                <p class="author text-gray-600">_by Me</p>
+                                <p class="date text-xs text-gray-500 uppercase">Publicado Setembro 2024</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <!-- Book 2 -->
+                <article>
+                    <div class="book bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl">
+                        <a href="https://economopolis.com.br/" target="_blank">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="/images/books/economopolis.jpg" alt="Capa do livro 'Economópolis'" class="w-full object-cover object-center object-cover-custom lazyload">
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium text-pink-500">Economópolis</h3>
+                                <p class="author text-gray-600">_by Me</p>
+                                <p class="date text-xs text-gray-500 uppercase">Publicado Julho 2024</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <!-- Book 3 -->
+                <article>
+                    <div class="book bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl">
+                        <a href="https://www.amazon.com.br/Menino-Dentro-Cartola-Retalhos-ebook/dp/B0CW1CSD1N" target="_blank">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="/images/books/o_menino_dentro_da_cartola.jpg" alt="Capa do livro 'O Menino Dentro da Cartola de Retalhos'" class="w-full object-cover object-center object-cover-custom lazyload">
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium text-pink-500">O Menino Dentro da Cartola de Retalhos</h3>
+                                <p class="author text-gray-600">_by Me</p>
+                                <p class="date text-xs text-gray-500 uppercase">Republicado Julho 2024</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <!-- Book 4 -->
+                <article>
+                    <div class="book bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl">
+                        <a href="https://www.amazon.com.br/dp/B0BS9VQTJW/" target="_blank">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="/images/books/javascript.jpg" alt="Capa do livro 'Javascript: Básico ao Avançado'" class="w-full object-cover object-center object-cover-custom lazyload">
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium text-pink-500">Javascript</h3>
+                                <h4 class="text-sm font-normal text-pink-500">Básico ao Avançado</h4>
+                                <p class="author text-gray-600">_by Me</p>
+                                <p class="date text-xs text-gray-500 uppercase">Publicado Junho 2018</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </div>
         </section>
-
+    
         <!-- Projects Section -->
-        <section id="projects" class="projects mb-12">
-            <h2 class="font-medium text-xl mb-4 text-gray-800 border-b-2 border-gray-400">Projetos</h2>
-            <article class="mb-6">
-                <div class="project p-4 border-2 border-gray-300 bg-white shadow-lg transform transition-transform hover:scale-105">
-                    <a href="https://mentalkare.org/" target="_blank">
-                        <h3 class="text-lg font-medium text-pink-500">MentalKare <span class="text-sm text-gray-600">Hub de Saúde Mental</span></h3>
-                        <p class="author text-gray-600">
-                            _by Me and <a class="text-sm text-gray-600 font-semibold" href="https://www.instagram.com/kellenleote" target="_blank">@kellenleote</a>
-                        </p>
-                        <p class="date text-xs text-gray-500 uppercase">Lançado Junho 2024</p>
-                    </a>
-                </div>
-            </article>
-            <article class="mb-6">
-                <div class="project p-4 border-2 border-gray-300 bg-white shadow-lg transform transition-transform hover:scale-105">
-                    <a href="http://bit.ly/2VqpB6n" target="_blank">
-                        <h3 class="text-lg font-medium text-pink-500">Super Mario <span class="text-sm text-gray-600">Gerador de Texto</span></h3>
-                        <p class="author text-gray-600">_by Me</p>
-                        <p class="date text-xs text-gray-500 uppercase">Lançado Fevereiro 2019</p>
-                    </a>
-                </div>
-            </article>
-            <article class="mb-6">
-                <div class="project p-4 border-2 border-gray-300 bg-white shadow-lg transform transition-transform hover:scale-105">
-                    <a href="http://bit.ly/KountdownJS" target="_blank">
-                        <h3 class="text-lg font-medium text-pink-500">Kountdown <span class="text-sm text-gray-600">Plugin de Cronômetro</span></h3>
-                        <p class="author text-gray-600">_by Me</p>
-                        <p class="date text-xs text-gray-500 uppercase">Lançado Novembro 2019</p>
-                    </a>
-                </div>
-            </article>
-            <article class="mb-6">
-                <div class="project p-4 border-2 border-gray-300 bg-white shadow-lg transform transition-transform hover:scale-105">
-                    <a href="https://bit.ly/3weiWQ4" target="_blank">
-                        <h3 class="text-lg font-medium text-pink-500">Guide Book <span class="text-sm text-gray-600">Style Guide Generator</span></h3>
-                        <p class="author text-gray-600">_by Me</p>
-                        <p class="date text-xs text-gray-500 uppercase">Lançado Janeiro 2021</p>
-                    </a>
-                </div>
-            </article>
+        <section id="projects" class="projects mb-12" data-aos="fade-up">
+            <h2 class="font-medium text-2xl mb-6 text-gray-800 border-b-2 border-gray-400">Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <article>
+                    <div class="project bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl">
+                        <a href="https://mentalkare.org/" target="_blank">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="/images/projects/mentalkare.png" alt="Screenshot do projeto 'MentalKare Hub de Saúde Mental'" class="w-full object-cover object-center object-cover-custom lazyload">
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium text-pink-500">MentalKare <span class="text-sm text-gray-600">Hub de Saúde Mental</span></h3>
+                                <p class="author text-gray-600">_by Me and <a href="https://www.instagram.com/kellenleote" target="_blank" class="font-semibold text-gray-600 hover:text-pink-500 transition-colors">@kellenleote</a></p>
+                                <p class="date text-xs text-gray-500 uppercase">Lançado Junho 2024</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <!-- Project 2 -->
+                <article>
+                    <div class="project bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl">
+                        <a href="http://bit.ly/2VqpB6n" target="_blank">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="/images/projects/super-mario.png" alt="Screenshot do projeto 'Super Mario Gerador de Texto'" class="w-full object-cover object-center object-cover-custom lazyload">
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium text-pink-500">Super Mario <span class="text-sm text-gray-600">Gerador de Texto</span></h3>
+                                <p class="author text-gray-600">_by Me</p>
+                                <p class="date text-xs text-gray-500 uppercase">Lançado Fevereiro 2019</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <!-- Project 3 -->
+                <article>
+                    <div class="project bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl">
+                        <a href="http://bit.ly/KountdownJS" target="_blank">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="/images/projects/kountdown-js.png" alt="Screenshot do projeto 'Kountdown Plugin de Cronômetro'" class="w-full object-cover object-center object-cover-custom lazyload">
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium text-pink-500">Kountdown <span class="text-sm text-gray-600">Plugin de Cronômetro</span></h3>
+                                <p class="author text-gray-600">_by Me</p>
+                                <p class="date text-xs text-gray-500 uppercase">Lançado Novembro 2019</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <!-- Project 4 -->
+                <article>
+                    <div class="project bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl">
+                        <a href="https://bit.ly/3weiWQ4" target="_blank">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="/images/projects/guide-book.png" alt="Screenshot do projeto 'Guide Book Style Guide Generator'" class="w-full object-cover object-center object-cover-custom lazyload">
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium text-pink-500">Guide Book <span class="text-sm text-gray-600">Style Guide Generator</span></h3>
+                                <p class="author text-gray-600">_by Me</p>
+                                <p class="date text-xs text-gray-500 uppercase">Lançado Janeiro 2021</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </div>
         </section>
-
+    
         <!-- Courses Section -->
-        <section id="courses" class="books mb-12">
-            <h2 class="font-medium text-xl mb-4 text-gray-800 border-b-2 border-gray-400">Cursos</h2>
-            <article class="mb-6">
-                <div class="book p-4 border-2 border-gray-300 bg-white shadow-lg transform transition-transform hover:scale-105">
-                    <a href="https://bit.ly/3wLQ3Ln" target="_blank">
-                        <h3 class="text-lg font-medium text-pink-500">Criando e aplicando um Style Guide do zero ao todo</h3>
-                        <p class="author text-gray-600">_by Me</p>
-                        <p class="date text-xs text-gray-500 uppercase">Publicado Abril 2021</p>
-                    </a>
-                </div>
-            </article>
+        <section id="courses" class="courses mb-12" data-aos="fade-up">
+            <h2 class="font-medium text-2xl mb-6 text-gray-800 border-b-2 border-gray-400">Cursos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Course 1 -->
+                <article>
+                    <div class="course bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105 hover:shadow-2xl">
+                        <a href="https://bit.ly/3wLQ3Ln" target="_blank">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="/images/courses/criando-e-aplicando-style-guide.png" alt="Capa do curso 'Criando e aplicando um Style Guide do zero ao todo'" class="w-full object-cover object-center object-cover-custom lazyload">
+                            <div class="p-4">
+                                <h3 class="text-lg font-medium text-pink-500">Criando e aplicando um Style Guide do zero ao todo</h3>
+                                <p class="author text-gray-600">_by Me</p>
+                                <p class="date text-xs text-gray-500 uppercase">Publicado Abril 2021</p>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+                <!-- Add more courses here if needed -->
+            </div>
         </section>
     </main>
-
-    <footer class="w-full max-w-2xl mx-auto p-8 text-center text-gray-600">
-        <a href="https://www.instagram.com/kelvinbiffi/" class="text-lg font-medium text-pink-500">@kelvinbiffi</a>
+    
+    <!-- Footer -->
+    <footer class="w-full mx-auto p-8 text-center bg-white text-gray-300" data-aos="fade-up">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://www.instagram.com/kelvinbiffi/" target="_blank" aria-label="Instagram">
+                <img src="/images/instagram.png" alt="Instagram de Kelvin Baumhardt Biffi" class="w-8 h-8 object-contain lazyload" data-src="/images/instagram.png">
+            </a>
+            <a href="https://www.linkedin.com/in/kelvinbiffi/" target="_blank" aria-label="LinkedIn">
+                <img src="/images/linkedin.png" alt="LinkedIn de Kelvin Baumhardt Biffi" class="w-8 h-8 object-contain lazyload" data-src="/images/linkedin.png">
+            </a>
+            <a href="https://github.com/kelvinbiffi" target="_blank" aria-label="GitHub">
+                <img src="/images/github.png" alt="GitHub de Kelvin Baumhardt Biffi" class="w-8 h-8 object-contain lazyload" data-src="/images/github.png">
+            </a>
+        </div>
+        <p class="text-sm text-gray-600">&copy; 2024 Kelvin Baumhardt Biffi. Todos os direitos reservados.</p>
     </footer>
+    
+    <!-- LazyLoad JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.3.1/lazyload.min.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazyload",
+            callback_loaded: function(element) {
+                element.classList.add("lazyloaded");
+            }
+        });
+    </script>
+    
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    
+    <!-- Smooth Scrolling for Older Browsers -->
+    <script>
+        // Smooth Scrolling (Fallback for browsers that do not support CSS scroll-behavior)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 60, // Adjust for navbar height
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    
+    <!-- Mobile Menu Toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('show'); // Toggle the show class for transition
+        });
+    </script>
+    
+    <!-- Hotjar Scripts (Retained from Original) -->
+    <script async src="https://static.hotjar.com/c/hotjar-973387.js?sv=6"></script>
+    <script async src="https://script.hotjar.com/modules.ca70bc16369dcd35d4ef.js" charset="utf-8"></script>
+    <script src="https://script.hotjar.com/survey-v2.cec218505e12e5c76ec6.js"></script>
 </body>
 </html>
